@@ -6,4 +6,4 @@ from django.http import HttpResponse,response,Http404,HttpResponseRedirect
 # Create your views here.
 
 def index(request):
-  return render(request, 'app1/index.html')
+  return render(request, 'shopApp/index.html')
