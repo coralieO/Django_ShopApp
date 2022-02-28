@@ -5,10 +5,11 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=100, default='')
     description = models.TextField(max_length=500, default='')
-    picture_link = models.CharField(max_length=100, default='')
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+    picture_link = models.ImageField(upload_to='images/', blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=3)
     quantity = models.IntegerField(default= 0)
     
     def __str__(self) -> str:
-        return self.picture_link , self.name, self.description
+         template = '{0.picture_link} {0.name} {0.description}'
+         return template.format(self)
             
