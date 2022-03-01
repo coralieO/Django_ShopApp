@@ -23,12 +23,12 @@
                 <h3>{{data.quantity}} En stock</h3>
             </div>
            
-               {%if {{data.quantity}} = 1 %}
-                <form method="POST" action="{{data.id}}/delete">  
-                    {%elif {{data.quantity}} > 0 %}
+               
+                <form method="POST" action="{{data.id}}/update_quantity">  
+                    
                 <!-- Security token by Django -->
                 {% csrf_token %}
-                
+                <input type="number" name="quantity">
                 <input type="submit" value="Acheter" />
             </form>
             
