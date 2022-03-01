@@ -1,0 +1,118 @@
+body {
+    background-color: #eee5e9;
+    font-family: 'Times New Roman', serif;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.grid {
+    margin: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+
+}
+
+.grid>.card {
+    background: #eee5e9;
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    transition: transform .3s;
+}
+
+.grid>.card>.title_description {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.grid>.card:hover {
+    transform: translateY(5px);
+    box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid>.card picture {
+    width: 100%;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 20px;
+
+}
+
+h3 {
+    text-transform: uppercase;
+    text-transform: none;
+    color: black;
+
+}
+
+button {
+    text-decoration: none;
+    background: #ef6F6d;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    height: 50px;
+    width: 120px;
+
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.space {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid>.card {
+        text-align: center;
+    }
+
+}
+
+
+/* Formulaire */
+
+
+.block {
+    margin: 80px;
+    padding-left: 400px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 30px; */
+    /* text-align: right; */
+
+
+}
+
+.form {
+    background: #eee5e9;
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    transition: transform .3s;
+}
