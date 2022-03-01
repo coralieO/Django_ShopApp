@@ -91,3 +91,28 @@ button a {
     }
 
 }
+
+
+/* Formulaire */
+
+
+.block {
+    margin: 80px;
+    padding-left: 400px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 30px; */
+    /* text-align: right; */
+
+
+}
+
+.form {
+    background: #eee5e9;
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    transition: transform .3s;
+}
