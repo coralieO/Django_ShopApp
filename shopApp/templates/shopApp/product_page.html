@@ -22,10 +22,10 @@
                 <h2>{{data.name}}</h2>
                 <p>{{data.description}}</p>
             </div>
-
-            <div class="picture"><img src="../../static/media/{{data.picture_link }}" alt=""></div>
+           
+            <div class="picture"><a href="{{data.id }}"><img src="../../static/media/{{data.picture_link }}" alt=""></a></div>
             <div class="space">
-
+         
             <div class="price_quantity">
                 <h3>{{data.price}} €</h3>
                 <h3 class="des">{{data.quantity}} En stock</h3>
@@ -33,7 +33,6 @@
             <button><a href="{{data.id }}">Voir les détails</a></button>
         </div>
          </div>
-
         {% endfor %}
        </div>
     </main>
