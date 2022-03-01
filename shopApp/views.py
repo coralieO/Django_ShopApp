@@ -54,6 +54,7 @@ def product_update(request,id):
 def product_delete(request, id): 
     context ={}
     obj = get_object_or_404(Product, id = id)
+    form = ProductForm(request.POST,request.FILES or None)
 
     if request.method == "POST" :
         obj.delete()
@@ -61,3 +62,8 @@ def product_delete(request, id):
         return HttpResponseRedirect("/shopApp/products")
 
     return render(request, "shopApp/product_detail.html",context)
+
+def update_quantity(request, id = id):
+    context ={}
+
+    context["dataset"] = Product.objects.get(id=id)
