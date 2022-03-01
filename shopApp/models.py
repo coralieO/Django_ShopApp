@@ -12,4 +12,3 @@ class Product(models.Model):
     def __str__(self) -> str:
          template = '{0.picture_link} {0.name} {0.description}'
          return template.format(self)
-            
