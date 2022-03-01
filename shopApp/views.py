@@ -58,6 +58,6 @@ def product_delete(request, id):
     if request.method == "POST" :
         obj.delete()
 
-        return HttpResponseRedirect("/shopApp/product_page")
+        return HttpResponseRedirect("/shopApp/products")
 
-    return render(request, "shopApp/product_delete.html",context)
+    return render(request, "shopApp/product_detail.html",context)

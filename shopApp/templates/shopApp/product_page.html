@@ -18,13 +18,13 @@
                 <p>{{data.description}}</p>
             </div>
            
-            <div class="picture"><img src="../../static/media/{{data.picture_link }}" alt=""></div>
+            <div class="picture"><a href="{{data.id }}"><img src="../../static/media/{{data.picture_link }}" alt=""></a></div>
          
             <div class="price_quantity">
                 <h3>{{data.price}} €</h3>
                 <h3>{{data.quantity}} En stock</h3>
             </div>
-            <button><a href="{{data.id }}">Voir les détails</a></button>
+            <button><a href="{{data.id}}">Voir les détails</a></button>
         </div>
         {% endfor %}
     </main>
