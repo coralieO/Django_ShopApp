@@ -10,3 +10,6 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields =['picture_link', 'price','quantity', 'name','description']
+    
+class BuyProductForm(forms.Form):
+    quantity = forms.IntegerField()

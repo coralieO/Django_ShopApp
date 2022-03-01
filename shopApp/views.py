@@ -13,7 +13,7 @@ def product_page(request):
     # field names as keys
     context ={}
 
-    context["dataset"] = Product.objects.all()
+    context["dataset"] = Product.objects.filter(quantity__gt=0)
 
     return render(request, "shopApp/product_page.html", context)
 
@@ -58,6 +58,22 @@ def product_delete(request, id):
     if request.method == "POST" :
         obj.delete()
 
-        return HttpResponseRedirect("/shopApp/product_page")
+        return HttpResponseRedirect("/shopApp/products")
 
-    return render(request, "shopApp/product_delete.html",context)
+    return render(request, "shopApp/product_detail.html",context)
+
+def update_quantity(request,id):
+    context = {}
+    obj = get_object_or_404(Product, id = id)
+    form = BuyProductForm(request.POST)
+    if form.is_valid():
+        obj.quantity-=form.cleaned_data['quantity']
+        if obj.quantity < 0:
+          return HttpResponseRedirect("/shopApp/"+id)
+        obj.save()
+        return HttpResponseRedirect("/shopApp/"+id)
+    
+    context["form"] = form
+ 
+    return render(request, "shopApp/product_update.html", context)
+
