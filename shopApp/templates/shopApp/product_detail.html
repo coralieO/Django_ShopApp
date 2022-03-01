@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page des produits</title>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Découvrez nos différents produits</h1>
-    </header>
-    <main>
-        {% for data in dataset %}
+    <div class="main">
+     
+        <!-- Specify fields to be displayed -->
         <div class="card">
             <div class="title_description">
                 <h2>{{data.title}}</h2>
@@ -24,9 +22,9 @@
                 <h3>{{data.price}} €</h3>
                 <h3>{{data.quantity}} En stock</h3>
             </div>
-            <button><a href="{{data.id }}">Voir les détails</a></button>
+            <button><a href="products">Retour sur les produits</a></button>
         </div>
-        {% endfor %}
-    </main>
+     
+    </div>
 </body>
 </html>
