@@ -5,28 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page des produits</title>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'shopApp/css/style.css' %}">
 </head>
 <body>
     <header>
         <h1>Découvrez nos différents produits</h1>
     </header>
-    <main>
+
+    <main id="container">
+        <div class="grid">
         {% for data in dataset %}
-        <div class="card">
+         <div class="card">
             <div class="title_description">
-                <h2>{{data.title}}</h2>
+                <h2>{{data.name}}</h2>
                 <p>{{data.description}}</p>
             </div>
-           
-            <div class="picture"><a href="{{data.id }}"><img src="../../static/media/{{data.picture_link }}" alt=""></a></div>
-         
+
+            <div class="picture"><img src="../../static/media/{{data.picture_link }}" alt=""></div>
+            <div class="space">
+
             <div class="price_quantity">
                 <h3>{{data.price}} €</h3>
-                <h3>{{data.quantity}} En stock</h3>
+                <h3 class="des">{{data.quantity}} En stock</h3>
             </div>
-            <button><a href="{{data.id}}">Voir les détails</a></button>
+            <button><a href="{{data.id }}">Voir les détails</a></button>
         </div>
+         </div>
+
         {% endfor %}
+       </div>
     </main>
 </body>
 </html>
