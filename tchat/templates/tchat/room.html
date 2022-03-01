@@ -43,6 +43,7 @@
             </div>
             {{ room.name|json_script:"roomName" }}
         </div>
-        <script src="{% static 'JS/room.js' %}"></script>
+        {%load static%}
+        <script src="{% static 'tchat/JS/room.js' %}"></script>
     </body>
 </html>
