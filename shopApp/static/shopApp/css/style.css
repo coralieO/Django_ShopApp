@@ -116,3 +116,12 @@ button a {
     width: 450px;
     transition: transform .3s;
 }
+
+/*Accueil*/
+
+.acceuil {
+    background: url("/static/media/images/bc.jpg") 50% 0 no-repeat fixed;
+    background-size: 100%;
+    color: white;
+    text-align: center;
+}
