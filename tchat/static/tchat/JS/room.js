@@ -62,7 +62,7 @@ function connect() {
         console.log(data);
 
         switch (data.type) {
-            case "chat_message":
+            case "tchat_message":
                 chatLog.value += data.message + "\n";
                 break;
             default:

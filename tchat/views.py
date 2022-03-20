@@ -11,7 +11,7 @@ def index_view(request):
 
 
 def room_view(request, room_name):
-    chat_room, created = Room.objects.get_or_create(name=room_name)
+    tchat_room, created = Room.objects.get_or_create(name=room_name)
     return render(request, 'tchat/room.html', {
-        'room': chat_room,
+        'room': tchat_room,
     })
